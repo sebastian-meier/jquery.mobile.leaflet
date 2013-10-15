@@ -85,9 +85,9 @@ If you want to add multiple markers you can place a piece of javascript inside y
 ```
 
 The variable can hold three types of objects:
-1. Array with Latitude and Longitude (float, int, string)
-2. Object with Latitude and Longitude
-3. Object with Latitude and Longitude + config options according to [L.marker({MarkerOptions})](http://leafletjs.com/reference.html#marker-options)
+* Array with Latitude and Longitude (float, int, string)
+* Object with Latitude and Longitude
+* Object with Latitude and Longitude + config options according to [L.marker({MarkerOptions})](http://leafletjs.com/reference.html#marker-options)
 
 #Accessing the map for interaction
 
