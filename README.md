@@ -9,9 +9,9 @@ Plugin / Widget for initializing leaflet maps in a jQuery Mobile Application
 
 jQuery Mobile comes with a lot of events regarding [pages](http://...). I would recommend binding the widget via the 'pageshow' Event:
 
-`$(document).on('pageshow', function(){ 
-	$.mobile.activePage.find('.map').leaflet(); 
-});`
+`$(document).on('pageshow', function(){`  
+`	$.mobile.activePage.find('.map').leaflet();`  
+`});`
 
 ##Options
 
