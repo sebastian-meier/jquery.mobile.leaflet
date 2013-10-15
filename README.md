@@ -97,7 +97,7 @@ If you need to access your map for further manipulation, you can easily do this 
 $('#map1').leaflet('getMap');
 ```
 
-If you for example need data about the markers and layers you have already passed your map you can also use this:
+If you, for example, need data about the markers and layers you have already passed to your map you can also use this:
 
 ```
 $('#map1').leaflet('getData');
