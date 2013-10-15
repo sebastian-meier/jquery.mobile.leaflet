@@ -94,13 +94,13 @@ The variable can hold three types of objects:
 If you need to access your map for further manipulation, you can easily do this via:
 
 ```
-$.mobile.activePage.find('#map1').leaflet('getMap');
+$('#map1').leaflet('getMap');
 ```
 
 If you for example need data about the markers and layers you have already passed your map you can also use this:
 
 ```
-$.mobile.activePage.find('#map1').leaflet('getData');
+$('#map1').leaflet('getData');
 ```
 
 You will receive an object with the folling parameters:
