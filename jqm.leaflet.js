@@ -73,6 +73,11 @@
 			//Add the default TileLayer as set in options and add it to our layer-set
 			self.map.layer.push(L.tileLayer(options.tileLayer.url, options.tileLayer.config).addTo(self.map.map));
 
+			//Check if the map-container has data-parameters for a marker
+			if( typeof self.map.element.attr('data-marker-lat') !== 'undefined' && typeof self.map.element.attr('data-marker-lng') !== 'undefined' ){
+				self.createMarker([self.map.element.attr('data-marker-lat'),self.map.element.attr('data-marker-lng')]);
+			}
+
 			if( eval('typeof '+self.map.id+'_marker') !== 'undefined' ){
 				$.each(eval(self.map.id+'_marker'), function(index, value) {
 					self.createMarker(value);
