@@ -53,10 +53,10 @@
 
 			//Check if the map-container has data-parameters for zoom and default map center
 			if( typeof self.map.element.attr('data-zoom') !== 'undefined'){
-				self.map.options.config.zoom = $(this).attr('data-zoom');
+				self.options.config.zoom = $(this).attr('data-zoom');
 			}
 			if( typeof self.map.element.attr('data-lat') !== 'undefined' && typeof self.map.element.attr('data-lng') !== 'undefined' ){
-				self.map.options.config.center=[self.map.element.attr('data-lat'),self.map.element.attr('data-lng')];
+				self.options.config.center=[self.map.element.attr('data-lat'),self.map.element.attr('data-lng')];
 			}
 
 			//Initialize the map object
