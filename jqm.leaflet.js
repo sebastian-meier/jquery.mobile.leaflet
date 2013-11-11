@@ -26,8 +26,12 @@
 			tileLayer:{
 				url:'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 				config:{
+					layers: '',
+    				format: 'image/png',
+					transparent: true,
 					attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-				}
+				},
+				wms:false
 			},
 			marker:{
 			},
@@ -71,7 +75,11 @@
 			}
 
 			//Add the default TileLayer as set in options and add it to our layer-set
-			self.map.layer.push(L.tileLayer(options.tileLayer.url, options.tileLayer.config).addTo(self.map.map));
+			if(options.tileLayer.wms){
+				self.map.layer.push(L.tileLayer.wms(options.tileLayer.url, options.tileLayer.config).addTo(self.map.map));
+			}else{
+				self.map.layer.push(L.tileLayer(options.tileLayer.url, options.tileLayer.config).addTo(self.map.map));	
+			}
 
 			//Check if the map-container has data-parameters for a marker
 			if( typeof self.map.element.attr('data-marker-lat') !== 'undefined' && typeof self.map.element.attr('data-marker-lng') !== 'undefined' ){

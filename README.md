@@ -46,6 +46,16 @@ Every map is initialized with a tileLayer, this is the default config
 		}
 	},
 ```
+You can also use wms TileLayers
+```
+	tileLayer:{
+		url:'http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi',
+		config:{
+			layers: 'nexrad-n0r-900913'
+		},
+		wms:true
+	},
+```
 Default config for markers added to the map via widget
 ```
 	marker:{},
